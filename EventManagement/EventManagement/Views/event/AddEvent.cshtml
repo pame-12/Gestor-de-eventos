@@ -1,0 +1,21 @@
+﻿@model EventManagement.Models.Event
+
+<h1>Agregar Evento</h1>
+
+<form asp-action="AddEvent" method="post">
+    <label>Título:</label>
+    <input type="text" name="Title" required />
+
+    <label>Descripción:</label>
+    <textarea name="Description" required></textarea>
+
+    <label>Fecha:</label>
+    <input type="datetime-local" name="EventDate" required />
+
+    <label>Ubicación:</label>
+    <input type="text" name="Location" required />
+
+    <button type="submit">Agregar</button>
+</form>
+
+<a href="/event/list">Volver a la lista</a>
