@@ -1,0 +1,31 @@
+﻿@model EventManagement.Models.Event
+
+<h1>Editar Evento</h1>
+
+<form asp-action="EditEvent" method="post">
+    <input type="hidden" asp-for="Id" />
+
+    <div>
+        <label asp-for="Title"></label>
+        <input asp-for="Title" />
+    </div>
+
+    <div>
+        <label asp-for="Description"></label>
+        <input asp-for="Description" />
+    </div>
+
+    <div>
+        <label asp-for="EventDate"></label>
+        <input asp-for="EventDate" type="datetime-local" />
+    </div>
+
+    <div>
+        <label asp-for="Location"></label>
+        <input asp-for="Location" />
+    </div>
+
+    <button type="submit">Guardar Cambios</button>
+</form>
+
+<a href="/event/list">Volver a la Lista</a>

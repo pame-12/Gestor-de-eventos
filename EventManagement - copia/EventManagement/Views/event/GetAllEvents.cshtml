@@ -1,0 +1,36 @@
+﻿@model IEnumerable<EventManagement.Models.Event>
+
+<h1>Lista de Eventos</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Título</th>
+            <th>Descripción</th>
+            <th>Fecha</th>
+            <th>Ubicación</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var eventItem in Model)
+        {
+            <tr>
+                <td>@eventItem.Id</td>
+                <td>@eventItem.Title</td>
+                <td>@eventItem.Description</td>
+                <td>@eventItem.EventDate.ToString("g")</td>
+                <td>@eventItem.Location</td>
+                <td>
+                    <a href="/event/edit/@eventItem.Id">Editar</a>
+                    <form action="/event/delete/@eventItem.Id" method="post" style="display:inline;">
+                        <button type="submit">Eliminar</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="/event/add">Agregar Evento</a>

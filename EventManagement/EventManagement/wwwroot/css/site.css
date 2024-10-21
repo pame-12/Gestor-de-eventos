@@ -20,3 +20,25 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+table {
+    border-collapse: collapse; /* Evita el espacio entre bordes */
+    width: 100%; /* Asegúrate de que la tabla use todo el ancho disponible */
+}
+
+    table tr {
+        background-color: #f9f9f9; /* Opcional: color de fondo para filas */
+    }  
+
+        table tr:nth-child(even) {
+            background-color: #f2f2f2; /* Alterna el color de fondo para filas pares */
+        }
+
+        table tr td {
+            padding: 15px; /* Espacio dentro de cada celda */
+            border: 1px solid #ccc; /* Borde alrededor de cada celda */
+        }
+
+.btn, .btn-link {
+    margin: 5px; /* Espacio alrededor de los botones y enlaces */
+}
